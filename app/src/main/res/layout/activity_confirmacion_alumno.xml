@@ -10,6 +10,7 @@
         android:id="@+id/btnGuardarAlumnoBBDD2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="pulsacionBtnGuardar"
         android:text="@string/btnGuardarAlumnoBBDD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +61,19 @@
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        tools:visibility="gone" />
 
     <TextView
         android:id="@+id/textSexo2"

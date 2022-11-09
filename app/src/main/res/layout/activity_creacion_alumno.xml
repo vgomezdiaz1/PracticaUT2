@@ -68,18 +68,19 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/editTextSexo"
+        android:id="@+id/editTextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/txtSexo"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.766"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.023"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/editTextEdad"
@@ -98,6 +99,7 @@
         android:id="@+id/btnGuardarAlumnoBBDD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="pulsacionBtnAceptar"
         android:text="@string/btnGuardarAlumnoBBDD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,4 +121,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.242" />
+
+    <Spinner
+        android:id="@+id/spinnerSexo"
+        android:layout_width="204dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:entries="@array/SeleccionarSexoAlumno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
 </androidx.constraintlayout.widget.ConstraintLayout>
