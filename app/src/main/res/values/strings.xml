@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PracticaUT2</string>
+    <string-array name="GrupoClase">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+    </string-array>
+    <string name="btnCrearAlumno">Crear alumno</string>
+    <string name="btnIntroducirDatos">Introducir datos</string>
+    <string name="btnVerAlumno">Ver alumno</string>
+    <string name="btnVerTodosAlumnos">Ver todos alumnos</string>
+    <string name="btnGuardarAlumnoBBDD">Guardar Alumno</string>
+    <string name="txtNockName">Nickname</string>
+    <string name="txtGrupo">Grupo</string>
+    <string name="txtSexo">Sexo</string>
+    <string name="txtEdad">Edad</string>
+</resources>
