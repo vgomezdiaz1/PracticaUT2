@@ -16,36 +16,48 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MyViewHolder> {
+public class MiAdaptadorListadoAlumnos extends RecyclerView.Adapter<MiAdaptadorListadoAlumnos.MyViewHolder> {
 
     ArrayList<Alumno> lista;
+    boolean completarAlumnos;
 
-    public MiAdaptador(ArrayList<Alumno> lista) {
+    public MiAdaptadorListadoAlumnos(ArrayList<Alumno> lista ,boolean completarAlumnos) {
         this.lista = lista;
+        this.completarAlumnos = completarAlumnos;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtid, txtNombre, txtGrupo, textSexo, txtEdad, txtLinea;
+        TextView txtid, txtNombre, txtGrupo, textSexo, txtEdad, txtIntroduccion;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtid = itemView.findViewById(R.id.txt_id);
+            txtid = itemView.findViewById(R.id.txt_idNick);
             txtNombre = itemView.findViewById(R.id.ViewNombre);
             txtGrupo = itemView.findViewById(R.id.ViewGrupo);
             textSexo = itemView.findViewById(R.id.ViewEdad);
             txtEdad = itemView.findViewById(R.id.ViewSexo);
-            txtLinea = itemView.findViewById(R.id.viewPasarLinea);
+            txtIntroduccion = itemView.findViewById(R.id.textViewIntroduccionInformacionAlumno);
             itemView.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(itemView.getContext(),creacionAlumnoActivity.class);
-                    i.putExtra("nombre",txtNombre.getText().toString());
-                    i.putExtra("grupo",txtGrupo.getText().toString());
-                    i.putExtra("sexo",textSexo.getText().toString());
-                    i.putExtra("edad",txtEdad.getText().toString());
-                    i.putExtra("id",txtid.getText().toString());
-
-                    itemView.getContext().startActivity(i);
+                    if(txtIntroduccion.getText().toString().equals("true")){
+                        Intent i = new Intent(itemView.getContext(), IntroduccionDatosCarrerasActivity.class);
+                        i.putExtra("id",txtid.getText().toString());
+                        i.putExtra("nombre",txtNombre.getText().toString());
+                        i.putExtra("grupo",txtGrupo.getText().toString());
+                        i.putExtra("sexo",textSexo.getText().toString());
+                        i.putExtra("edad",txtEdad.getText().toString());
+                        itemView.getContext().startActivity(i);
+                    }else {
+                        Intent i = new Intent(itemView.getContext(), CreacionAlumnoActivity.class);
+                        i.putExtra("id", txtid.getText().toString());
+                        i.putExtra("nombre", txtNombre.getText().toString());
+                        i.putExtra("grupo", txtGrupo.getText().toString());
+                        i.putExtra("sexo", textSexo.getText().toString());
+                        i.putExtra("edad", txtEdad.getText().toString());
+                        itemView.getContext().startActivity(i);
+                    }
                 }
             });
 
@@ -80,16 +92,13 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflador = LayoutInflater.from(parent.getContext());
 
-        View v = inflador.inflate(R.layout.elemento,parent, false);
+        View v = inflador.inflate(R.layout.elemento_vista_alumnos,parent, false);
 
         MyViewHolder mvh = new MyViewHolder(v);
 
         return mvh;
     }
 
-
-    //Esta funcion es para hacer cada elemento de la lista que hemos creado en MyViewHolder
-    //y mostrarlo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.txtid.setText("" + (lista.get(position).getId()));
@@ -97,7 +106,7 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MyViewHolder> 
         holder.txtGrupo.setText(lista.get(position).getGrupo());
         holder.textSexo.setText(lista.get(position).getSexo());
         holder.txtEdad.setText(lista.get(position).getEdad());
-        holder.txtLinea.setText("-----------------------------------------------");
+        holder.txtIntroduccion.setText("" + this.completarAlumnos);
     }
     @Override
     public int getItemCount() {

@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,9 @@ public class ListadoCompletoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_completo);
         ArrayList<Alumno> lista = new ArrayList<>();
+
+        Intent i = getIntent();
+        Boolean introduccion = i.getBooleanExtra("introduccion",false);
 
         SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.db), MODE_PRIVATE, null);
         Cursor cursor = myDB.rawQuery("select * from alumno",null);
@@ -36,8 +41,7 @@ public class ListadoCompletoActivity extends AppCompatActivity {
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         rv.setLayoutManager(lm);
 
-        MiAdaptador adaptador = new MiAdaptador(lista);
+        MiAdaptadorListadoAlumnos adaptador = new MiAdaptadorListadoAlumnos(lista, introduccion);
         rv.setAdapter(adaptador);
-
     }
 }

@@ -1,13 +1,13 @@
 package com.example.practicaut2;
 
-public class NotasCarreras {
+public class AlumnoNotasCarreras {
 
     int trimestre;
     double fuerza;
     double velocidad;
     double resistencia;
 
-    public NotasCarreras(int trimestre, double fuerza, double velocidad, double resistencia) {
+    public AlumnoNotasCarreras(int trimestre, double fuerza, double velocidad, double resistencia) {
         this.trimestre = trimestre;
         this.fuerza = fuerza;
         this.velocidad = velocidad;

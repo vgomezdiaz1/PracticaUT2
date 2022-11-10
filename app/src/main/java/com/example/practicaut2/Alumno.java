@@ -6,7 +6,7 @@ public class Alumno {
     String grupo;
     String sexo;
     String edad;
-    NotasCarreras nc;
+    AlumnoNotasCarreras nc;
 
     public Alumno(int id, String nombre, String grupo, String sexo, String edad) {
         this.id =id;
@@ -16,7 +16,7 @@ public class Alumno {
         this.edad = edad;
         this.nc = null;
     }
-    public Alumno(int id, String nombre, String grupo, String sexo, String edad, NotasCarreras nc) {
+    public Alumno(int id, String nombre, String grupo, String sexo, String edad, AlumnoNotasCarreras nc) {
         this.id =id;
         this.nombre = nombre;
         this.grupo = grupo;
@@ -66,11 +66,11 @@ public class Alumno {
         this.edad = edad;
     }
 
-    public NotasCarreras getNc() {
+    public AlumnoNotasCarreras getNc() {
         return nc;
     }
 
-    public void setNc(NotasCarreras nc) {
+    public void setNc(AlumnoNotasCarreras nc) {
         this.nc = nc;
     }
 }

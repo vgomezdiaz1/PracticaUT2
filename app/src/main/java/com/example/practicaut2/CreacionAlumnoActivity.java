@@ -1,21 +1,17 @@
 package com.example.practicaut2;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class creacionAlumnoActivity extends AppCompatActivity {
+public class CreacionAlumnoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +43,14 @@ public class creacionAlumnoActivity extends AppCompatActivity {
         String[] sexoArray = getResources().getStringArray(R.array.SeleccionarSexoAlumno);
         x = 0;
         for (int j = 0; j < sexoArray.length; j++) {
-            if(sexoArray[j].equals(grupo)){
+            if(sexoArray[j].equals(sexo)){
                 x = j;
                 break;
             }
         }
         Spinner selectorSexo = (Spinner) findViewById(R.id.spinnerSexo);
         selectorSexo.setSelection(x);
+
         String edad = i.getStringExtra("edad");
         EditText edadET = findViewById(R.id.editTextEdad);
         edadET.setText(edad);
@@ -99,11 +96,6 @@ public class creacionAlumnoActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public void pulsacionBtnCargarContacto(View v) {
-        Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-        startActivityForResult(i, 34);
     }
 
     private boolean comprobarVacios(EditText x) {
