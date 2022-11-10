@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pulsacionBtnverTodosAlumnos(View v) {
-        Intent i = new Intent(this, creacionAlumnoActivity.class);
+        Intent i = new Intent(this, ListadoCompletoActivity.class);
         startActivity(i);
     }
 }
