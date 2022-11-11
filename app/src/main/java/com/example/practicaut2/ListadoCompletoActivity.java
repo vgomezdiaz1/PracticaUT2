@@ -32,8 +32,19 @@ public class ListadoCompletoActivity extends AppCompatActivity {
             String grupo = cursor.getString(2);
             String sexo = cursor.getString(3);
             String edad = cursor.getString(4);
-            Log.v("alumno", id + nombre + " " + grupo + " " + edad + " " + sexo);
-            lista.add(new Alumno(id,nombre,grupo,sexo,edad));
+            double flexibilidad1 = cursor.getDouble(5);
+            double flexibilidad3 = cursor.getDouble(6);
+            double fuerza1= cursor.getDouble(7);
+            double fuerza3 = cursor.getDouble(8);
+            double velocidad1= cursor.getDouble(9);
+            double velocidad3 = cursor.getDouble(10);
+            double resistencia1 = cursor.getDouble(11);
+            double resistencia3 = cursor.getDouble(12);
+            Log.v("alumno", id + " " + nombre + " " + grupo + " " + edad + " " + sexo + " " + flexibilidad1
+                    + " " + flexibilidad3 + " " + fuerza1 +" " + fuerza3 + " " + velocidad1 + " " + velocidad3
+            + " " + resistencia1 + " " + resistencia3);
+            lista.add(new Alumno(id,nombre,grupo,sexo,edad,flexibilidad1,flexibilidad3,fuerza1,fuerza3,
+                    velocidad1,velocidad3,resistencia1,resistencia3));
         }
         RecyclerView rv = findViewById(R.id.lista_Alumnos);
         rv.setHasFixedSize(true);
@@ -41,7 +52,7 @@ public class ListadoCompletoActivity extends AppCompatActivity {
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         rv.setLayoutManager(lm);
 
-        MiAdaptadorListadoAlumnos adaptador = new MiAdaptadorListadoAlumnos(lista, introduccion);
+        MiAdaptadorListadoAlumnosCompleto adaptador = new MiAdaptadorListadoAlumnosCompleto(lista);
         rv.setAdapter(adaptador);
     }
 }

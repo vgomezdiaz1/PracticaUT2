@@ -28,10 +28,13 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
         String nombre = i.getStringExtra("nombre");
         TextView nombreET = findViewById(R.id.textViewNombreAlumno);
         nombreET.setText(nombre);
+        String id = i.getStringExtra("id");
+        TextView idET = findViewById(R.id.editTextIDAlumnoCarreras);
+        idET.setText(id);
         String grupo = i.getStringExtra("grupo");
         String sexo = i.getStringExtra("sexo");
         String edad = i.getStringExtra("edad");
-        String id = i.getStringExtra("id");
+
     }
     public void pulsacionBtnAceptar(View v) {
         int n = 0;

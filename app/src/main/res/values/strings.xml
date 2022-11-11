@@ -16,7 +16,7 @@
         <item>1ºTrimestre</item>
         <item>3ºTrimestre</item>
     </string-array>
-    <string name="db">my2.db</string>
+    <string name="db">my5.db</string>
     <string name="btnCrearAlumno">Crear alumno</string>
     <string name="btnIntroducirDatos">Introducir datos</string>
     <string name="btnVerAlumno">Ver alumno</string>
@@ -30,4 +30,7 @@
     <string name="txtFuerza">Fuerza</string>
     <string name="txtVelocidad">Velocidad</string>
     <string name="txtResistencia">Resistencia</string>
+    <string name="PrimerTrimestre">1ºTrimestre</string>
+    <string name="TercerTrimsetre">3ºTrimsetre</string>
+    <string name="Asignatura">Asignatura</string>
 </resources>

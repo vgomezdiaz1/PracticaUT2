@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,6 @@ public class ConfirmacionDatosCarrerasActivity extends AppCompatActivity {
         textoID.setText(i.getStringExtra("id"));
     }
     public void pulsacionBtnGuardar(View v) {
-        TextView textoNombre = findViewById(R.id.textViewAlumno);
         TextView textoFlex = findViewById(R.id.textViewFlex);
         TextView textoFuer = findViewById(R.id.textViewFuer);
         TextView textoVel = findViewById(R.id.textViewVel);
@@ -56,19 +56,24 @@ public class ConfirmacionDatosCarrerasActivity extends AppCompatActivity {
         String id = textoID.getText().toString();
         //Creamos un ContentValues, que es lo que guarda los datos para introducir en un BBDD
         ContentValues cv = new ContentValues();
-        cv.put("idAlumno", id);
-        cv.put("trimestre",Trimestre);
-        cv.put("flexivilidad",Flexivilidad);
-        cv.put("fuerza", Fuerza);
-        cv.put("velocidad", Velocidad);
-        cv.put("resistencia", Resistencia);
+        if(Trimestre.equals("1ºTrimestre")){
+            cv.put("flexivilidad1",Flexivilidad);
+            cv.put("fuerza1", Fuerza);
+            cv.put("velocidad1", Velocidad);
+            cv.put("resistencia1", Resistencia);
+        }else {
+            cv.put("flexivilidad3", Flexivilidad);
+            cv.put("fuerza3", Fuerza);
+            cv.put("velocidad3", Velocidad);
+            cv.put("resistencia3", Resistencia);
+        }
+        Log.v("alumno", id + " " + Flexivilidad + " " + Fuerza + " " + Velocidad + " " + Resistencia);
         //Iniciamos la BBDD
         SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.db), MODE_PRIVATE, null);
-
         long correcto = 0;
         String mensaje = "";
-        correcto = myDB.insert("prueba",null, cv);
-        mensaje = "Contacto guardado";
+        correcto = myDB.update(" alumno ",cv, " id = ? ", new String[]{id});
+        mensaje = "Datos guardados";
         if(correcto>-1){
             Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this, MainActivity.class);

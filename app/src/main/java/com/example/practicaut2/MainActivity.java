@@ -20,18 +20,15 @@ public class MainActivity extends AppCompatActivity {
                         " nombre VARCHAR(50), " +
                         " grupo VARCHAR(2), " +
                         " sexo VARCHAR(10), " +
-                        " edad Integer)"
-        );
-        myDB.execSQL(
-                "CREATE TABLE IF NOT EXISTS prueba " +
-                        "(idPrueba Integer PRIMARY KEY AUTOINCREMENT, " +
-                        " idAlumno Integer, " +
-                        " trimestre Integer, " +
-                        " flexivilidad double," +
-                        " fuerza double, " +
-                        " velocidad double, " +
-                        " resistencia double," +
-                        " FOREIGN KEY (idAlumno) REFERENCES alumno(id))"
+                        " edad Integer," +
+                        "flexivilidad1 double default 0," +
+                        "flexivilidad3 double default 0," +
+                        "fuerza1 double default 0," +
+                        "fuerza3 double default 0," +
+                        "velocidad1 double default 0," +
+                        "velocidad3 double default 0," +
+                        "resistencia1 double default 0," +
+                        "resistencia3 double default 0)"
         );
     }
 
