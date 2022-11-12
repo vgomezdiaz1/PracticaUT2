@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btnCrearAlumno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="56dp"
         android:onClick="pulsacionBtnNuevoAlumno"
         android:text="@string/btnCrearAlumno"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,44 +17,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
-
-    <Button
-        android:id="@+id/btnIntoDatos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pulsacionBtnIntroducionDatos"
-        android:text="@string/btnIntroducirDatos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
-
-    <Button
-        android:id="@+id/btnVerAlumno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pulsacionBtnVerAlumno"
-        android:text="@string/btnVerAlumno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.361"
+        app:strokeColor="#1EF603" />
 
     <Button
         android:id="@+id/btnVerTodosAlumno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="56dp"
         android:onClick="pulsacionBtnverTodosAlumnos"
         android:text="@string/btnVerTodosAlumnos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.471" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

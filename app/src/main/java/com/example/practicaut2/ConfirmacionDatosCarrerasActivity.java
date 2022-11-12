@@ -56,7 +56,7 @@ public class ConfirmacionDatosCarrerasActivity extends AppCompatActivity {
         String id = textoID.getText().toString();
         //Creamos un ContentValues, que es lo que guarda los datos para introducir en un BBDD
         ContentValues cv = new ContentValues();
-        if(Trimestre.equals("1ºTrimestre")){
+        if(Trimestre.equals("1ºTRIMESTRE")){
             cv.put("flexivilidad1",Flexivilidad);
             cv.put("fuerza1", Fuerza);
             cv.put("velocidad1", Velocidad);

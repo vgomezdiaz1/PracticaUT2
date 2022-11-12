@@ -21,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
                         " grupo VARCHAR(2), " +
                         " sexo VARCHAR(10), " +
                         " edad Integer," +
-                        "flexivilidad1 double default 0," +
-                        "flexivilidad3 double default 0," +
-                        "fuerza1 double default 0," +
-                        "fuerza3 double default 0," +
-                        "velocidad1 double default 0," +
-                        "velocidad3 double default 0," +
-                        "resistencia1 double default 0," +
-                        "resistencia3 double default 0)"
+                        "flexivilidad1 double default -1," +
+                        "flexivilidad3 double default -1," +
+                        "fuerza1 double default -1," +
+                        "fuerza3 double default -1," +
+                        "velocidad1 double default -1," +
+                        "velocidad3 double default -1," +
+                        "resistencia1 double default -1," +
+                        "resistencia3 double default -1)"
         );
     }
 
     public void pulsacionBtnNuevoAlumno(View v) {
-        Intent i = new Intent(this, CreacionAlumnoActivity.class);
+        Intent i = new Intent(this, IntroduccionDatosAlumnoActivity.class);
         startActivity(i);
     }
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pulsacionBtnVerAlumno(View v) {
-        Intent i = new Intent(this, CreacionAlumnoActivity.class);
+        Intent i = new Intent(this, IntroduccionDatosAlumnoActivity.class);
         startActivity(i);
     }
 

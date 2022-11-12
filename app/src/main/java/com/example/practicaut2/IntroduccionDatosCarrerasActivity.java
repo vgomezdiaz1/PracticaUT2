@@ -18,23 +18,31 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduccion_datos_carreras);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.SeleccionarTrimestre, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        Spinner selectorTrimestre = (Spinner)findViewById(R.id.spinnerTrimestre);
-        selectorTrimestre.setSelection(0);
-
         Intent i = getIntent();
-        String nombre = i.getStringExtra("nombre");
-        TextView nombreET = findViewById(R.id.textViewNombreAlumno);
-        nombreET.setText(nombre);
         String id = i.getStringExtra("id");
         TextView idET = findViewById(R.id.editTextIDAlumnoCarreras);
         idET.setText(id);
-        String grupo = i.getStringExtra("grupo");
-        String sexo = i.getStringExtra("sexo");
-        String edad = i.getStringExtra("edad");
 
+        String nombre = i.getStringExtra("nombre");
+        TextView nombreET = findViewById(R.id.textViewNombreAlumno);
+        nombreET.setText(nombre);
+
+        String trimestre = i.getStringExtra("trimestre");
+        TextView trimestreET = findViewById(R.id.textTrimestre);
+        trimestreET.setText(trimestre);
+
+        String flexibilidad = i.getStringExtra("Flex");
+        TextView flexibilidadET = findViewById(R.id.editTextFlexibilidad);
+        flexibilidadET.setHint(flexibilidad);
+        String fuerza = i.getStringExtra("Fuerza");
+        TextView fuerzaET = findViewById(R.id.editTextFuerza);
+        fuerzaET.setHint(fuerza);
+        String velocidad = i.getStringExtra("Vel");
+        TextView velocidadET = findViewById(R.id.editTextVelocidad);
+        velocidadET.setHint(velocidad);
+        String resistencia = i.getStringExtra("Res");
+        TextView resistenciaET = findViewById(R.id.editTextResistencia);
+        resistenciaET.setHint(resistencia);
     }
     public void pulsacionBtnAceptar(View v) {
         int n = 0;
@@ -48,7 +56,7 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
 
         EditText tid = findViewById(R.id.editTextIDAlumnoCarreras);
         TextView tNom = findViewById(R.id.textViewNombreAlumno);
-        Spinner selectorTrimestre = (Spinner)findViewById(R.id.spinnerTrimestre);
+        TextView tTri = findViewById(R.id.textTrimestre);
         EditText tFlexivilidad = findViewById(R.id.editTextFlexibilidad);
         EditText tFuerza = findViewById(R.id.editTextFuerza);
         EditText tVelocidad = findViewById(R.id.editTextVelocidad);
@@ -70,11 +78,10 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
             tRes = tResistencia.getText().toString();
             n++;
         }
-        tTrimestre =(String) selectorTrimestre.getSelectedItem();
-
         if (n == 4) {
             tIdentificador = tid.getText().toString();
             tNickName = tNom.getText().toString();
+            tTrimestre = tTri.getText().toString();
             Intent i = new Intent(this, ConfirmacionDatosCarrerasActivity.class);
             i.putExtra("nombre", tNickName);
             i.putExtra("Flexivilidad", tFlex);
