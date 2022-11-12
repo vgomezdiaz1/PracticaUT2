@@ -31,10 +31,11 @@
         <item>3ºTrimestre</item>
     </string-array>
     <string name="db">my.db</string>
+    <string name="btnModificarAlumno">Modificar</string>
+    <string name="btnConsultarAlumno">Consultar alumno</string>
     <string name="btnCrearAlumno">Crear alumno</string>
     <string name="btnIntroducirDatos">Introducir datos</string>
-    <string name="btnVerAlumno">Ver alumno</string>
-    <string name="btnVerTodosAlumnos">Ver todos alumnos</string>
+    <string name="btnVerTodosAlumnos">Modificar alumnos</string>
     <string name="btnGuardarAlumnoBBDD">Guardar Alumno</string>
     <string name="txtCreacionAlumno">Creacion Alumno</string>
     <string name="txtConfirmacionAlumno">Confirmacion Alumno</string>

@@ -31,13 +31,14 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtid, txtNombre, txtGrupo, txtSexo, txtFlex1, txtFlex3, txtF1,txtF3, txtV1,txtV3,txtRes1,txtRes3, txtFlexTotal,txtFuTotal, txtVelTotal, txtResistenciaTotal;
+        TextView txtid, txtNombre, txtGrupo, txtSexo, txtEdad, txtFlex1, txtFlex3, txtF1,txtF3, txtV1,txtV3,txtRes1,txtRes3, txtFlexTotal,txtFuTotal, txtVelTotal, txtResistenciaTotal;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtid = itemView.findViewById(R.id.txtIDNotasCompleto);
             txtNombre = itemView.findViewById(R.id.txtNombreAlumno);
             txtGrupo = itemView.findViewById(R.id.txtGrupoAlumno);
             txtSexo = itemView.findViewById(R.id.txtSexoAlumno);
+            txtEdad = itemView.findViewById(R.id.txtNotas);
             txtFlex1 = itemView.findViewById(R.id.txtFlex1);
             txtFlex3 = itemView.findViewById(R.id.txtFlex3);
             txtF1 = itemView.findViewById(R.id.txtFu1);
@@ -55,33 +56,46 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
             btnPrimer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(itemView.getContext(), IntroduccionDatosCarrerasActivity.class);
-                    intent.putExtra("trimestre", "1ºTRIMESTRE");
-                    intent.putExtra("id",txtid.getText().toString());
-                    intent.putExtra("nombre",txtNombre.getText().toString());
-                    intent.putExtra("Flex",txtF1.getText().toString());
-                    intent.putExtra("Fuerza",txtF1.getText().toString());
-                    intent.putExtra("Vel",txtV1.getText().toString());
-                    intent.putExtra("Res",txtRes1.getText().toString());
-                    itemView.getContext().startActivity(intent);
+                    Intent i = new Intent(itemView.getContext(), IntroduccionDatosCarrerasActivity.class);
+                    i.putExtra("trimestre", "1ºTRIMESTRE");
+                    i.putExtra("id",txtid.getText().toString());
+                    i.putExtra("nombre",txtNombre.getText().toString());
+                    i.putExtra("Flex",txtF1.getText().toString());
+                    i.putExtra("Fuerza",txtF1.getText().toString());
+                    i.putExtra("Vel",txtV1.getText().toString());
+                    i.putExtra("Res",txtRes1.getText().toString());
+                    itemView.getContext().startActivity(i);
                 }
             });
             Button btnTercer = itemView.findViewById(R.id.btnTercerTrimestre);
             btnTercer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(itemView.getContext(), IntroduccionDatosCarrerasActivity.class);
-                    intent.putExtra("trimestre", "3ºTRIMESTRE");
-                    intent.putExtra("id",txtid.getText().toString());
-                    intent.putExtra("nombre",txtNombre.getText().toString());
-                    intent.putExtra("Flex",txtF3.getText().toString());
-                    intent.putExtra("Fuerza",txtF3.getText().toString());
-                    intent.putExtra("Vel",txtV3.getText().toString());
-                    intent.putExtra("Res",txtRes3.getText().toString());
-                    itemView.getContext().startActivity(intent);
+                    Intent i = new Intent(itemView.getContext(), IntroduccionDatosCarrerasActivity.class);
+                    i.putExtra("trimestre", "3ºTRIMESTRE");
+                    i.putExtra("id",txtid.getText().toString());
+                    i.putExtra("nombre",txtNombre.getText().toString());
+                    i.putExtra("Flex",txtF3.getText().toString());
+                    i.putExtra("Fuerza",txtF3.getText().toString());
+                    i.putExtra("Vel",txtV3.getText().toString());
+                    i.putExtra("Res",txtRes3.getText().toString());
+                    itemView.getContext().startActivity(i);
                 }
             });
 
+            Button btnModificar = itemView.findViewById(R.id.btnModificarAlumno);
+            btnModificar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(itemView.getContext(), IntroduccionDatosAlumnoActivity.class);
+                    i.putExtra("id",txtid.getText().toString());
+                    i.putExtra("nombre",txtNombre.getText().toString());
+                    i.putExtra("grupo", txtGrupo.getText().toString());
+                    i.putExtra("sexo", txtSexo.getText().toString());
+                    i.putExtra("edad", txtEdad.getText().toString());
+                    itemView.getContext().startActivity(i);
+                }
+            });
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
@@ -125,6 +139,7 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.txtid.setText("" + (lista.get(position).getId()));
+        holder.txtEdad.setText("" + (lista.get(position).getEdad()));
         holder.txtNombre.setText(lista.get(position).getNombre());
         holder.txtGrupo.setText(lista.get(position).getGrupo());
         holder.txtSexo.setText(lista.get(position).getSexo());

@@ -37,20 +37,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void pulsacionBtnIntroducionDatos(View v) {
-        Intent i = new Intent(this, ListadoCompletoActivity.class);
-        i.putExtra("introduccion",true);
-        startActivity(i);
-    }
-
-    public void pulsacionBtnVerAlumno(View v) {
-        Intent i = new Intent(this, IntroduccionDatosAlumnoActivity.class);
+    public void pulsacionConsultarAlumno(View v) {
+        Intent i = new Intent(this, ConsultarAlumnoActivity.class);
         startActivity(i);
     }
 
     public void pulsacionBtnverTodosAlumnos(View v) {
         Intent i = new Intent(this, ListadoCompletoActivity.class);
-        i.putExtra("introduccion",false);
         startActivity(i);
     }
 }

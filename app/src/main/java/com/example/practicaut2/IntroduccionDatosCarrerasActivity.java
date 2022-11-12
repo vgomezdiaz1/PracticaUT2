@@ -33,16 +33,24 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
 
         String flexibilidad = i.getStringExtra("Flex");
         TextView flexibilidadET = findViewById(R.id.editTextFlexibilidad);
-        flexibilidadET.setHint(flexibilidad);
+        if(!flexibilidad.equals("ND")){
+            flexibilidadET.setHint(flexibilidad);
+        }
         String fuerza = i.getStringExtra("Fuerza");
         TextView fuerzaET = findViewById(R.id.editTextFuerza);
-        fuerzaET.setHint(fuerza);
+        if(!fuerza.equals("ND")){
+            fuerzaET.setHint(fuerza);
+        }
         String velocidad = i.getStringExtra("Vel");
         TextView velocidadET = findViewById(R.id.editTextVelocidad);
-        velocidadET.setHint(velocidad);
+        if(!velocidad.equals("ND")){
+            velocidadET.setHint(velocidad);
+        }
         String resistencia = i.getStringExtra("Res");
         TextView resistenciaET = findViewById(R.id.editTextResistencia);
-        resistenciaET.setHint(resistencia);
+        if(!resistencia.equals("ND")){
+            resistenciaET.setHint(resistencia);
+        }
     }
     public void pulsacionBtnAceptar(View v) {
         int n = 0;
