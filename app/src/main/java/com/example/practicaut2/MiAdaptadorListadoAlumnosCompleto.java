@@ -38,7 +38,7 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
             txtNombre = itemView.findViewById(R.id.txtNombreAlumno);
             txtGrupo = itemView.findViewById(R.id.txtGrupoAlumno);
             txtSexo = itemView.findViewById(R.id.txtSexoAlumno);
-            txtEdad = itemView.findViewById(R.id.txtNotas);
+            txtEdad = itemView.findViewById(R.id.txtEdadAlumno);
             txtFlex1 = itemView.findViewById(R.id.txtFlex1);
             txtFlex3 = itemView.findViewById(R.id.txtFlex3);
             txtF1 = itemView.findViewById(R.id.txtFu1);
@@ -141,8 +141,9 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
         holder.txtid.setText("" + (lista.get(position).getId()));
         holder.txtEdad.setText("" + (lista.get(position).getEdad()));
         holder.txtNombre.setText(lista.get(position).getNombre());
-        holder.txtGrupo.setText(lista.get(position).getGrupo());
+        holder.txtGrupo.setText("1º" + lista.get(position).getGrupo());
         holder.txtSexo.setText(lista.get(position).getSexo());
+        holder.txtEdad.setText(lista.get(position).getEdad() + " años");
         if(lista.get(position).getFlexibilidad1()==-1){
             holder.txtFlex1.setText("ND");
         }else{
@@ -199,7 +200,7 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
             holder.txtVelTotal.setText("ND");
         }else{
             holder.txtVelTotal.setText("" + (lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1()) + " s");
-            if((lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1())<=0){
+            if((lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1())>=0){
                 holder.txtVelTotal.setBackgroundResource(red);
             }else{
                 holder.txtVelTotal.setBackgroundResource(green);

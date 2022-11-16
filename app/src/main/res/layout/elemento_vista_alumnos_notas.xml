@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/txtNombreNota"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="@string/Asignatura"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAlumno"
         app:layout_constraintVertical_bias="0.0" />
@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/txtVel1"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -63,14 +63,14 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFu1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtNombreAlumno10"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="@string/txtVelocidad"
@@ -78,42 +78,42 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAlumno11"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtNombreAlumno16"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="@string/txtResistencia"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAlumno10"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtResistencia3"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtVel3"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtFlex1"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -121,28 +121,28 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreNota"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtResistencia1"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtVel1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtVel3"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -150,14 +150,14 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFu3"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtNombreAlumno7"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="@string/txtFlexibilidad"
@@ -165,21 +165,21 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreNota"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtFu3"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFlex3"
         app:layout_constraintVertical_bias="0.0" />
@@ -202,7 +202,7 @@
 
     <TextView
         android:id="@+id/txtFlexTotal"
-        android:layout_width="98dp"
+        android:layout_width="108dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -217,21 +217,21 @@
 
     <TextView
         android:id="@+id/txtNombreAlumno11"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="@string/txtFuerza"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAlumno7"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtFuTotal"
-        android:layout_width="98dp"
+        android:layout_width="108dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
@@ -245,21 +245,21 @@
 
     <TextView
         android:id="@+id/txtGrupoAlumno"
-        android:layout_width="126dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/txtResistenciaTotal"
-        android:layout_width="98dp"
+        android:layout_width="108dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
@@ -273,7 +273,7 @@
 
     <TextView
         android:id="@+id/txtNombreAlumno8"
-        android:layout_width="98dp"
+        android:layout_width="108dp"
         android:layout_height="23dp"
         android:text="@string/sumaTrimsetre"
         android:textAlignment="center"
@@ -287,21 +287,21 @@
 
     <TextView
         android:id="@+id/txtFu1"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFlex1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtFlex3"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -309,42 +309,42 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreAlumno5"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtNombreAlumno"
-        android:layout_width="126dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/txtNombreAlumno4"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="@string/PrimerTrimestre"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtGrupoAlumno"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtVelTotal"
-        android:layout_width="98dp"
+        android:layout_width="108dp"
         android:layout_height="23dp"
         android:background="@android:drawable/divider_horizontal_textfield"
         android:text="TextView"
@@ -359,28 +359,42 @@
 
     <TextView
         android:id="@+id/txtSexoAlumno"
-        android:layout_width="126dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="TextView"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/txtEdadAlumno"
+        android:layout_width="100dp"
+        android:layout_height="23dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/txtNombreAlumno5"
-        android:layout_width="98dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
         android:text="@string/TercerTrimsetre"
         android:textAlignment="center"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.643"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSexoAlumno"
         app:layout_constraintVertical_bias="0.0" />
