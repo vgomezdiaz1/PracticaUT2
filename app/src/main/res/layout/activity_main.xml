@@ -10,6 +10,7 @@
         android:id="@+id/btnCrearAlumno"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/teal_700"
         android:fontFamily="sans-serif"
         android:onClick="pulsacionBtnNuevoAlumno"
         android:text="@string/btnCrearAlumno"
@@ -21,12 +22,13 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <Button
         android:id="@+id/btnConsultarAlumno"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/teal_700"
         android:fontFamily="sans-serif"
         android:onClick="pulsacionConsultarAlumno"
         android:text="@string/btnConsultarAlumno"
@@ -38,12 +40,13 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.426" />
 
     <Button
         android:id="@+id/btnVerTodosAlumno"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/teal_700"
         android:fontFamily="sans-serif"
         android:onClick="pulsacionBtnverTodosAlumnos"
         android:text="@string/btnVerTodosAlumnos"
@@ -55,6 +58,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.708" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

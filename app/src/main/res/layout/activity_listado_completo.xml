@@ -24,19 +24,20 @@
             android:layout_height="41dp"
             android:entries="@array/GrupoClaseBusqueda" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="pulsacionBtnBuscar"
-            android:text="@string/buscar" />
-
         <TextView
             android:id="@+id/textViewIntroduccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="141dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="pulsacionBtnBuscar"
+            android:text="@string/buscar" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -150,6 +150,7 @@
         android:id="@+id/btnConfirmarDatos2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
         android:onClick="pulsacionBtnGuardar"
         android:text="@string/btnIntroducirDatos"
         app:layout_constraintBottom_toBottomOf="parent"
