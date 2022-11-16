@@ -25,14 +25,14 @@ public class ConsultarAlumnoActivity extends AppCompatActivity {
     }
 
     public void pulsacionBtnAceptar(View v) {
-        ArrayList<Alumno> lista = new ArrayList<>();
         EditText tNom = findViewById(R.id.editTextNickName2);
         Spinner selectorGrupo = (Spinner) findViewById(R.id.spinnerSeleccionGrupo2);
         Spinner selectorSexo = (Spinner) findViewById(R.id.spinnerSexo2);
+        String nombre = tNom.getText().toString();
         String seleccionSexo =(String)  selectorSexo.getSelectedItem();
         String seleccionGrupo =(String)  selectorGrupo.getSelectedItem();
-        if(tNom.equals("") && seleccionGrupo.equals("Todos") && seleccionSexo.equals("Todos")){
-            Toast.makeText(this, "Tienes que meter algun criterio de busqueda", Toast.LENGTH_SHORT).show();
+        if(nombre.equals("") && seleccionGrupo.equals("Todos") && seleccionSexo.equals("Todos")){
+            Toast.makeText(this, "Debes meter algun criterio de busqueda", Toast.LENGTH_SHORT).show();
         }else{
             Intent i = new Intent(this, ListarAlumnoActivity.class);
             i.putExtra("nombre", tNom.getText().toString());

@@ -1,64 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ListadoCompletoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerSexos"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:entries="@array/SeleccionarSexoAlumnoBusqueda" />
+
+        <Spinner
+            android:id="@+id/spinnerGrupos"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:entries="@array/GrupoClaseBusqueda" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pulsacionBtnBuscar"
+            android:text="@string/buscar" />
+
+        <TextView
+            android:id="@+id/textViewIntroduccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_Alumnos"
-        android:layout_width="413dp"
-        android:layout_height="671dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textViewIntroduccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:visibility="gone"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="698dp" />
-
-    <Spinner
-        android:id="@+id/spinnerGrupos"
-        android:layout_width="135dp"
-        android:layout_height="41dp"
-        android:entries="@array/GrupoClaseBusqueda"
-        app:layout_constraintBottom_toTopOf="@+id/lista_Alumnos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
-
-    <Spinner
-        android:id="@+id/spinnerSexos"
-        android:layout_width="135dp"
-        android:layout_height="41dp"
-        android:entries="@array/SeleccionarSexoAlumnoBusqueda"
-        app:layout_constraintBottom_toTopOf="@+id/lista_Alumnos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="pulsacionBtnBuscar"
-        android:text="@string/buscar"
-        app:layout_constraintBottom_toTopOf="@+id/lista_Alumnos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

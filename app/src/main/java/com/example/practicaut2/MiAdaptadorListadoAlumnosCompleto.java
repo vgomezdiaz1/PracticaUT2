@@ -146,17 +146,17 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
         if(lista.get(position).getFlexibilidad1()==-1){
             holder.txtFlex1.setText("ND");
         }else{
-            holder.txtFlex1.setText("" +lista.get(position).getFlexibilidad1());
+            holder.txtFlex1.setText("" +lista.get(position).getFlexibilidad1() + " cm");
         }
         if(lista.get(position).getFlexibilidad3()==-1){
             holder.txtFlex3.setText("ND");
         }else{
-            holder.txtFlex3.setText("" +lista.get(position).getFlexibilidad3());
+            holder.txtFlex3.setText("" +lista.get(position).getFlexibilidad3() + " cm");
         }
         if(lista.get(position).getFlexibilidad1()==-1 || lista.get(position).getFlexibilidad3()==-1){
             holder.txtFlexTotal.setText("ND");
         }else{
-            holder.txtFlexTotal.setText("" + (lista.get(position).getFlexibilidad3() - lista.get(position).getFlexibilidad1()));
+            holder.txtFlexTotal.setText("" + (lista.get(position).getFlexibilidad3() - lista.get(position).getFlexibilidad1()) + " cm");
             if((lista.get(position).getFlexibilidad3() - lista.get(position).getFlexibilidad1())<=0){
                 holder.txtFlexTotal.setBackgroundResource(red);
             }else{
@@ -167,17 +167,17 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
         if(lista.get(position).getFuerza1()==-1){
             holder.txtF1.setText("ND");
         }else{
-            holder.txtF1.setText("" +lista.get(position).getFuerza1());
+            holder.txtF1.setText("" +lista.get(position).getFuerza1() + " m");
         }
         if(lista.get(position).getFuerza3()==-1){
             holder.txtF3.setText("ND");
         }else{
-            holder.txtF3.setText("" +lista.get(position).getFuerza3());
+            holder.txtF3.setText("" +lista.get(position).getFuerza3() + " m");
         }
         if(lista.get(position).getFuerza1()==-1 || lista.get(position).getFuerza3()==-1){
             holder.txtFuTotal.setText("ND");
         }else{
-            holder.txtFuTotal.setText("" + (lista.get(position).getFuerza3() - lista.get(position).getFuerza1()));
+            holder.txtFuTotal.setText("" + (lista.get(position).getFuerza3() - lista.get(position).getFuerza1()) + " m");
             if((lista.get(position).getFuerza3() - lista.get(position).getFuerza1())<=0){
                 holder.txtFuTotal.setBackgroundResource(red);
             }else{
@@ -188,17 +188,17 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
         if(lista.get(position).getVelocidad1()==-1){
             holder.txtV1.setText("ND");
         }else {
-            holder.txtV1.setText("" + lista.get(position).getVelocidad1());
+            holder.txtV1.setText("" + lista.get(position).getVelocidad1() + " s");
         }
         if(lista.get(position).getVelocidad3()==-1){
             holder.txtV3.setText("ND");
         }else{
-            holder.txtV3.setText("" +lista.get(position).getVelocidad3());
+            holder.txtV3.setText("" +lista.get(position).getVelocidad3() + " s");
         }
         if(lista.get(position).getVelocidad1()==-1 || lista.get(position).getVelocidad3()==-1){
             holder.txtVelTotal.setText("ND");
         }else{
-            holder.txtVelTotal.setText("" + (lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1()));
+            holder.txtVelTotal.setText("" + (lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1()) + " s");
             if((lista.get(position).getVelocidad3() - lista.get(position).getVelocidad1())<=0){
                 holder.txtVelTotal.setBackgroundResource(red);
             }else{
@@ -209,17 +209,17 @@ public class MiAdaptadorListadoAlumnosCompleto extends RecyclerView.Adapter<MiAd
         if(lista.get(position).getResistencia1()==-1){
             holder.txtRes1.setText("ND");
         }else{
-            holder.txtRes1.setText("" +lista.get(position).getResistencia1());
+            holder.txtRes1.setText("" +lista.get(position).getResistencia1() + " m");
         }
         if(lista.get(position).getResistencia3()==-1){
             holder.txtRes3.setText("ND");
         }else{
-            holder.txtRes3.setText("" +lista.get(position).getResistencia3());
+            holder.txtRes3.setText("" +lista.get(position).getResistencia3() + " m");
         }
         if(lista.get(position).getResistencia1()==-1 || lista.get(position).getResistencia3()==-1){
             holder.txtResistenciaTotal.setText("ND");
         }else{
-            holder.txtResistenciaTotal.setText("" + (lista.get(position).getResistencia3() - lista.get(position).getResistencia1()));
+            holder.txtResistenciaTotal.setText("" + (lista.get(position).getResistencia3() - lista.get(position).getResistencia1()) + " m");
             if((lista.get(position).getResistencia3() - lista.get(position).getResistencia1())<=0){
                 holder.txtResistenciaTotal.setBackgroundResource(red);
             }else{

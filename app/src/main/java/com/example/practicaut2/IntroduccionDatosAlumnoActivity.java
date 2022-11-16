@@ -75,7 +75,10 @@ public class IntroduccionDatosAlumnoActivity extends AppCompatActivity {
         }
         tGrupo =(String) selectorGrupo.getSelectedItem();
         tSexo =(String) selectorSexo.getSelectedItem();
-        if (n == 2) {
+        if(!tGrupo.equals("Seleccionar") && !tSexo.equals("Seleccionar")){
+            n++;
+        }
+        if (n == 3) {
             //Si todos los campos estan llenos pasamos todos, incluido el id
             tIdentificador = tid.getText().toString();
             Intent i = new Intent(this, ConfirmacionAlumnoActivity.class);
@@ -93,7 +96,7 @@ public class IntroduccionDatosAlumnoActivity extends AppCompatActivity {
     private boolean comprobarVacios(EditText x) {
         if (x.getText().toString().equals("")) {
             x.requestFocus();
-            x.setBackgroundTintList(getColorStateList(R.color.purple_200));
+            x.setBackgroundTintList(getColorStateList(R.color.red));
             return false;
         } else {
             x.setBackgroundTintList(getColorStateList(R.color.teal_700));

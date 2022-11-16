@@ -69,23 +69,23 @@ public class IntroduccionDatosCarrerasActivity extends AppCompatActivity {
         EditText tFuerza = findViewById(R.id.editTextFuerza);
         EditText tVelocidad = findViewById(R.id.editTextVelocidad);
         EditText tResistencia = findViewById(R.id.editTextResistencia);
-
-        if (comprobarVacios(tFlexivilidad)) {
-            tFlex = tFlexivilidad.getText().toString();
-            n++;
-        }
-        if (comprobarVacios(tFuerza)) {
-            tFuer = tFuerza.getText().toString();
+        if (comprobarVacios(tResistencia)) {
+            tRes = tResistencia.getText().toString();
             n++;
         }
         if (comprobarVacios(tVelocidad)) {
             tVel = tVelocidad.getText().toString();
             n++;
         }
-        if (comprobarVacios(tResistencia)) {
-            tRes = tResistencia.getText().toString();
+        if (comprobarVacios(tFuerza)) {
+            tFuer = tFuerza.getText().toString();
             n++;
         }
+        if (comprobarVacios(tFlexivilidad)) {
+            tFlex = tFlexivilidad.getText().toString();
+            n++;
+        }
+
         if (n == 4) {
             tIdentificador = tid.getText().toString();
             tNickName = tNom.getText().toString();

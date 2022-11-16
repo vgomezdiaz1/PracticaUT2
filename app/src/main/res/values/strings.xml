@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ed. Física</string>
     <string-array name="GrupoClase">
+        <item>Seleccionar</item>
         <item>A</item>
         <item>B</item>
         <item>C</item>
@@ -9,6 +10,7 @@
         <item>F</item>
     </string-array>
     <string-array name="SeleccionarSexoAlumno">
+        <item>Seleccionar</item>
         <item>Hombre</item>
         <item>Mujer</item>
     </string-array>
